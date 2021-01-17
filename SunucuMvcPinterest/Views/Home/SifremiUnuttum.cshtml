@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "SifremiUnuttum";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<div style="padding-top:200px" class="container" align="center">
+
+    @using (Html.BeginForm())
+    {
+        <div width="50px">
+            <label>E Posta Adresi:</label>
+            <input type="text" class="form-control" name="Mail">
+        </div>
+
+        <div>
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Şifre Al" class="btn btn-success" />
+            </div>
+        </div>
+
+    }
+
+    
+</div>
+
+

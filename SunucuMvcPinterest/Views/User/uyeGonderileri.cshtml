@@ -1,0 +1,29 @@
+﻿@using SunucuMvcPinterest.Models.Model
+@model List<Yayin>
+@{
+    ViewBag.Title = "uyeGonderileri";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Resim</th>
+        <th>İçerik</th>
+        <th>Tarih</th>
+        <th>GÜNCELLE</th>
+        <th>SİL</th>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><img src="@item.resim_yol" width="500" height="500" /></td>
+                <td>@item.icerik</td>
+                <td>@item.tarih</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+

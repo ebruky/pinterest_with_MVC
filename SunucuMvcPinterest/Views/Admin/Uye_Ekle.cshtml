@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Uye_Ekle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>@Session["uyarı"].ToString()</h2>
+
+
+<div style="padding-top:100px" class="container" align="center">
+    @using (Html.BeginForm())
+    {<div class="form-group">
+            <label>Kullanıcı Adı</label>
+            <input type="text" class="form-control" name="k_adi">
+        </div>
+
+        <div class="form-group">
+            <label>Şifre</label>
+            <input type="password" class="form-control" name="sifre">
+        </div>
+        <div class="form-group">
+            <label>Adı Soyadı</label>
+            <input type="text" class="form-control" name="adSoyad">
+        </div>
+        <div class="form-group">
+            <label>Telefon</label>
+            <input type="text" class="form-control" name="telefon">
+        </div>
+        <div class="form-group">
+            <label>Mail</label>
+            <input type="text" class="form-control" name="Mail">
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Ekle" class="btn btn-success" />
+            </div>
+        </div>
+    }
+
+</div>
+
+
+

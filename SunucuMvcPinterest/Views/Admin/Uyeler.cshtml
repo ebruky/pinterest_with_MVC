@@ -1,0 +1,35 @@
+﻿@using SunucuMvcPinterest.Models.Model
+@model List<Uye>
+@{
+    ViewBag.Title = "Uyeler";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<table class="table table-bordered">
+    <tr>
+        <th>Adı Soyadı</th>
+        <th>Telefon</th>
+        <th>Mail</th>
+        <th>Kullanıcı Adı</th>
+        <th>Şifre</th>
+        <th>GÜNCELLE</th>
+        <th>SİL</th>
+    </tr>
+    <tbody>
+        @foreach (var uye in Model)
+        {
+            <tr>
+                <td>@uye.adSoyad</td>
+                <td>@uye.telefon</td>
+                <td>@uye.Mail</td>
+                <td>@uye.k_adi</td>
+                <td>@uye.sifre</td>
+                <td><a href="/Admin/Uye_Güncelle/@uye.id" class="btn btn-success">GÜNCELLE</a></td>
+                <td><a href="/Admin/Uye_Sil/@uye.id" class="btn btn-danger">SİL</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Admin/Uye_Ekle/" class="btn btn-primary">YENİ ÜYE EKLE</a>
+
+
+

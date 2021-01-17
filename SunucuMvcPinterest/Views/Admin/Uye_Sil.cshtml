@@ -1,0 +1,43 @@
+﻿@model SunucuMvcPinterest.Models.Model.Uye
+@{
+    ViewBag.Title = "Uye_Sil";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+    <h3>Silmek İstediğinize Emin Misiniz?</h3>
+
+    <div style="padding-top:100px" class="container" align="center">
+
+        <div class="form-group">
+            <label>Kullanıcı Adı:</label>
+            @Html.DisplayFor(model => model.k_adi)
+
+        </div>
+
+        <div class="form-group">
+            <label>Şifre</label>
+            @Html.DisplayFor(model => model.sifre)
+        </div>
+        <div class="form-group">
+            <label>Adı Soyadı</label>
+            @Html.DisplayFor(model => model.adSoyad)
+        </div>
+        <div class="form-group">
+            <label>Telefon</label>
+            @Html.DisplayFor(model => model.telefon)
+        </div>
+        <div class="form-group">
+            <label>Mail</label>
+            @Html.DisplayFor(model => model.Mail)
+        </div>
+        @using (Html.BeginForm())
+        {
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Sil" class="btn btn-success" />
+                </div>
+            </div>
+        }
+
+    </div>
+
+

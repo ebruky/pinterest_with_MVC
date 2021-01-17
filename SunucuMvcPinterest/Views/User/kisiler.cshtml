@@ -1,0 +1,28 @@
+﻿@using SunucuMvcPinterest.Models.Model
+@model List<Uye>
+@{
+    ViewBag.Title = "kisiler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<table class="table table-bordered">
+    <tr>
+
+        <th>Kullanıcı Adı</th>
+        <th>Adı Soyadı</th>
+
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><a href="/User/uyeGonderileri/@item.id">@Html.DisplayFor(modelItem => item.k_adi)</a></td>
+                <td>@item.adSoyad</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+

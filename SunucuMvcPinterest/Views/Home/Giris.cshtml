@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Giris";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+    <div style="padding-top:200px" class="container" align="center">
+
+        @using (Html.BeginForm())
+        {
+            <div width="50px">
+                <label>Kullanıcı Adı</label>
+                <input type="text" class="form-control" name="k_adi">
+            </div>
+
+            <div width="50px">
+                <label>Şifre</label>
+                <input type="password" class="form-control" name="sifre">
+            </div>
+
+            <div>
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Giriş Yap" class="btn btn-success" />
+                </div>
+            </div>
+
+        }
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <a href="/Home/Uye_Kayit" class="btn btn-info">ÜYE KAYIT</a>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <a href="/Home/SifremiUnuttum" class="btn btn-danger">ŞİFREMİ UNUTTUM!</a>
+            </div>
+        </div>
+    </div>
+

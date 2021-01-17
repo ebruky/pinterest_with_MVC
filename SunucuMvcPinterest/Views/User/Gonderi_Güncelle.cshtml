@@ -1,0 +1,37 @@
+﻿@model SunucuMvcPinterest.Models.Model.Yayin
+@{
+    ViewBag.Title = "Gonderi_Güncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="padding-top:100px" class="container" align="center">
+    @using (Html.BeginForm("Gonderi_Güncelle", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {<div class="form-group">
+            @Html.HiddenFor(model => model.İd)
+
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Resim</label>
+                <div class="fileupload fileupload-new" data-provides="resim_yol">
+                    <span class="btn btn-white btn-file">
+                        <span class="fileupload-new"><i class="icon-paper-clip"></i> Resim Seç</span>
+                        <input type="file" name="resim_yol" class="default" />
+                    </span>
+                    <span class="fileupload-preview" style="margin-left:5px;"></span>
+                    <a href="#" class="close fileupload-exists" data-dismiss="resim_yol" style="float: none; margin-left:5px;"></a>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>İçerik</label>
+                @Html.TextBoxFor(model => model.icerik, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Ekle" class="btn btn-success" />
+                </div>
+            </div>
+    
+
+        </div>}
+
+
